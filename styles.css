@@ -1,4 +1,4 @@
-/* VisionStyle Prototyp - Weitere Experimente */
+/* VisionStyle Prototyp - Experimentelle Änderungen */
 
 * {
     margin: 0;
@@ -7,37 +7,24 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', cursive;  /* Unprofessionelle Schrift! */
-    line-height: 2;
-    color: #000;
-    background: repeating-linear-gradient(
-        45deg,
-        #f0f0f0,
-        #f0f0f0 10px,
-        #e0e0e0 10px,
-        #e0e0e0 20px
-    );  /* Gestreifter Hintergrund */
+    font-family: 'Arial', sans-serif;  /* Schrift geändert */
+    line-height: 1.8;  /* Line-height erhöht */
+    color: #222;  /* Farbe dunkler */
+    background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 100%);  /* Hintergrund mit Gradient */
 }
 
 header {
-    background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);  /* Grelle Farben */
-    color: yellow;  /* Schlechte Lesbarkeit */
-    padding: 2rem 2rem;
-    box-shadow: 0 4px 8px rgba(255,0,255,0.5);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+    background: #1a252f;  /* Dunklere Farbe */
+    color: white;
+    padding: 2rem 2rem;  /* Mehr Padding */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);  /* Stärkerer Schatten */
 }
 
 header h1 {
     display: inline-block;
     margin-right: 2rem;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-decoration: underline wavy;
+    font-size: 2.2rem;  /* Größere Schrift */
+    font-weight: 900;  /* Fetter */
 }
 
 nav {
@@ -46,96 +33,80 @@ nav {
 }
 
 nav a {
-    color: lime;  /* Grelle Farbe */
+    color: #ffd700;  /* Goldene Farbe - wirkt unpassend */
     text-decoration: none;
     padding: 0.5rem 1rem;
     margin: 0 0.25rem;
     transition: all 0.3s ease;
     font-weight: bold;
-    border: 2px dashed orange;
 }
 
 nav a:hover {
-    background: magenta;
-    border-radius: 50%;  /* Runde Links */
-    transform: scale(1.5);
+    background: #ff6b6b;  /* Rote Hover-Farbe */
+    border-radius: 8px;
 }
 
 .hero {
-    background: linear-gradient(135deg, #ff1493 0%, #00ff00 50%, #0000ff 100%);
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);  /* Rötlicher Gradient */
     color: white;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
-    animation: rainbow 5s linear infinite;
-}
-
-@keyframes rainbow {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
 }
 
 .hero h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0.9;
 }
 
 .features {
     display: flex;
     justify-content: space-around;
     padding: 4rem 2rem;
-    gap: 3rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .feature-card {
     flex: 1;
-    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    background: #ffffff;
     padding: 3rem;
-    border-radius: 50% 20% / 10% 40%;  /* Seltsame Form */
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    transition: all 0.5s ease;
-    border: 5px solid purple;
-    animation: wobble 3s ease-in-out infinite;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    border: 3px solid #ff6b6b;  /* Rote Border */
 }
 
-@keyframes wobble {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-10px) rotate(-5deg); }
-    75% { transform: translateX(10px) rotate(5deg); }
+.feature-card:hover {
+    transform: translateY(-10px) rotate(2deg);  /* Rotation beim Hover */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
 .feature-card h3 {
-    color: yellow;
+    color: #ff6b6b;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    text-decoration: underline;
 }
 
 .feature-card p {
-    color: white;
+    color: #444;
     font-style: italic;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
 footer {
-    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
-    color: yellow;
+    background: #1a252f;
+    color: white;
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 1.1rem;
 }
